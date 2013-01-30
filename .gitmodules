@@ -1,0 +1,3 @@
+[submodule "hw2/rottenpotatoes"]
+	path = hw2/rottenpotatoes
+	url = git@heroku.com:ancient-dusk-6918.git
