@@ -23,9 +23,9 @@ describe "Homework 1, ex 6" do
     end
 
     it "should convert one currency to another" do
-      5.rupees.in(:yen).must_be_within_delta 7.3, 0.1
-      1.dollar.in('euro').must_be_within_delta 1.292, 0.001
-      10.euros.in('rupees').must_be_within_delta 0.245, 0.001
+      5.rupees.in(:yen).must_be_within_delta 7.307, 0.001
+      5.dollars.in(:euros).must_be_within_delta 3.869, 0.001
+      10.euros.in(:rupees).must_be_within_delta 680.0, 0.001
     end
   end
 
@@ -55,6 +55,11 @@ describe "Homework 1, ex 6" do
 
     it "should recognizes non palindromes on enumerables correctly" do
       [1,2,3,4,5].palindrome?.must_equal false
+    end
+
+    it "should work with enumerators" do
+      [1,2,3,3,2,1].map.palindrome?.must_equal true
+      [1,2,3,4,5,6].map.palindrome?.must_equal false
     end
   end
 end
